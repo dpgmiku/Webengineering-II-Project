@@ -17,6 +17,7 @@ img {
     width: 200px;
     margin: .5vw;
     height: auto;
+    background-image:
 }
 
 @media (max-width: 400px) {

@@ -2,6 +2,9 @@ window.onload = function () {
 
     var images = document.getElementsByClassName("image");
     var img = null;
+
+    // Could be realized with a for of loop (new js-spec)
+    // Add event-listeners iterative to all elements with class "image"
     for (var i = 0; i < images.length; i++) {
         img = images[i];
         img.addEventListener('mouseover',
@@ -14,7 +17,6 @@ window.onload = function () {
                 hideImageButtons(img);
             }
         );
-
         img.addEventListener("touchstart",
             function () {
                 showImageButtons(img);
@@ -25,9 +27,7 @@ window.onload = function () {
                 hideImageButtons(img);
             }
         );
-
     }
-
 
     /**
      * Show the buttons on image by changing the CSS-class

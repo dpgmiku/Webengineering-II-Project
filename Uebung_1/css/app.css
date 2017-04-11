@@ -1,0 +1,26 @@
+head, body {
+    margin: 0px;
+    max-width:100%;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.content{
+    flex-flow: row wrap;
+    display: flex;
+    align-items: flex-start;
+}
+
+img {
+    flex: 1;
+    width: 200px;
+    margin: .5vw;
+    height: auto;
+}
+
+@media (max-width: 400px) {
+    .content {
+        display: block;
+    }
+}

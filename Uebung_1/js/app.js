@@ -1,7 +1,3 @@
-function showLikeButton(node)
-{
-    node.innerHTML = "test";
-}
 
 window.onload = function () {
 
@@ -17,7 +13,17 @@ window.onload = function () {
         );
     }
 
-    // changes class for the triggered node to visible
+
+    /**
+     * Shows the like-button on a html-element by changing its CSS-class
+     * @param node DOM-Element from which to change the class
+     */
+    function showLikeButton(node)
+    {
+        node.innerHTML = "test";
+    }
+
+
 
 };
 

@@ -1,28 +1,49 @@
-
 window.onload = function () {
 
     var images = document.getElementsByClassName("image");
     var img = null;
-    for(var i = 0; i < images.length; i++)
-    {
+    for (var i = 0; i < images.length; i++) {
         img = images[i];
         img.addEventListener('mouseover',
-            function() {
-              showLikeButton(img);
+            function () {
+                showImageButtons(img);
             }
         );
+        img.addEventListener('mouseout',
+            function () {
+                hideImageButtons(img);
+            }
+        );
+
+        img.addEventListener("touchstart",
+            function () {
+                showImageButtons(img);
+            }
+        );
+        img.addEventListener('touchend',
+            function () {
+                hideImageButtons(img);
+            }
+        );
+
     }
 
 
     /**
-     * Shows the like-button on a html-element by changing its CSS-class
-     * @param node DOM-Element from which to change the class
+     * Show the buttons on image by changing the CSS-class
+     * @param node image dom-elment
      */
-    function showLikeButton(node)
-    {
+    function showImageButtons(node) {
         node.innerHTML = "test";
     }
 
+    /**
+     * Hide the buttons on image by changing the CSS-class
+     * @param node image dom-element
+     */
+    function hideImageButtons(node) {
+
+    }
 
 
 };

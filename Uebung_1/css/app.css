@@ -23,6 +23,8 @@ header {
 
 nav {
     float: left;
+    margin-left: 50px;
+    margin-top: 10px;
 }
 
 section {
@@ -39,9 +41,20 @@ footer {
 img {
     display: inline-block;
     width: 100%;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px grey;
 }
 
-@media only screen and (min-width: 400px) {
+.addImageButton {
+    background-color: brown;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+@media only screen and (min-width: 480px) {
     .content {
         -moz-column-count: 2;
         -webkit-column-count: 2;
@@ -49,7 +62,7 @@ img {
     }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 720px) {
     .content {
         -moz-column-count: 3;
         -webkit-column-count: 3;
@@ -57,7 +70,7 @@ img {
     }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 960px) {
     .content {
         -moz-column-count: 4;
         -webkit-column-count: 4;
@@ -65,7 +78,7 @@ img {
     }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1200px) {
     .content {
         -moz-column-count: 5;
         -webkit-column-count: 5;

@@ -28,8 +28,8 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Uebung_1/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state relative-caret-position="425">
+              <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -38,8 +38,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Uebung_1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="175">
+              <caret line="17" column="81" lean-forward="false" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -635,12 +635,12 @@
       <workItem from="1491995456736" duration="25000" />
       <workItem from="1492076090096" duration="1082000" />
       <workItem from="1492093229229" duration="30000" />
-      <workItem from="1492187803344" duration="2182000" />
+      <workItem from="1492187803344" duration="2665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15478000" />
+    <option name="totallyTimeSpent" value="15961000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1171" y="0" width="1399" height="1404" extended-state="0" />
@@ -820,16 +820,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Uebung_1/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="175">
+          <caret line="17" column="81" lean-forward="false" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Uebung_1/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        <state relative-caret-position="425">
+          <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
           <folding />
         </state>
       </provider>

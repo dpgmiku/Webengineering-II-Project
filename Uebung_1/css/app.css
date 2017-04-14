@@ -1,31 +1,45 @@
 head, body {
 
-margin: 0;
+    margin: 0;
 }
 
 .container {
-    width: 95%;
-    margin: 3em auto;
+    display: block;
+    width: auto;
+    margin: auto;
+}
+
+header {
+    font-size: 50px;
+    font-family: "Comic Sans MS";
+    margin-left: 50px;
+    margin-top: 20px;
 }
 
 .content {
+    margin: 50px;
+    display: inline-block;
+}
 
-    margin: 1.5em 0;
-    padding: 0;
-    -moz-column-gap: 1.5em;
-    -webkit-column-gap: 1.5em;
-    column-gap: 1.5em;
-    font-size: .85em;
+nav {
+    float: left;
+}
 
+section {
+    float: right;
+}
+
+footer {
+    width: 100%;
+    float: right;
+    border-style: solid;
+    border-width: 5px;
 }
 
 img {
     display: inline-block;
-    margin: 0 0 1em;
     width: 100%;
-
 }
-
 
 @media only screen and (min-width: 400px) {
     .content {
@@ -65,10 +79,3 @@ img {
     }
 }
 
-
-
-
-
-
-
-}

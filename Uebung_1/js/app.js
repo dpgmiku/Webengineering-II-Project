@@ -45,17 +45,40 @@ window.onload = function () {
     for (var i = 0; i < likeButtonClassList.length; i++) {
         likeButtonClassList[i].addEventListener('click', function (event) {
             var btn = event.target;
-            if(btn.style.transform == "" || btn.style.transform == "rotate(-180deg)") {
+            if (btn.style.transform == "" || btn.style.transform == "rotate(-180deg)") {
                 btn.style.transform = "rotate(0deg)";
             }
-            else
-            {
+            else {
                 btn.style.transform = "rotate(-180deg)";
             }
 
         });
     }
 
+    var detailsButtonList = document.getElementsByClassName("detailsButton");
+    for (var i = 0; i < detailsButtonList.length; i++) {
+        detailsButtonList[i].addEventListener('click', function (event) {
+            var btn = event.target;
+            var img = btn.parentNode.parentNode;
+            var imgList = document.getElementsByClassName('img-large');
+            for (var i = 0; i < imgList.length; i++) {
+                imgList[i].classList.remove("img-large");
+                imgList[i].classList.toggle("img");
+            }
+            img.classList.toggle("img-large");
+        });
+    }
+
+
+    document.body.addEventListener('click', function (event) {
+        if (event.target.classList[0] != 'detailsButton') {
+            var imgList = document.getElementsByClassName('img-large');
+            for (var i = 0; i < imgList.length; i++) {
+                imgList[i].classList.remove("img-large");
+                imgList[i].classList.toggle("img");
+            }
+        }
+    });
 
 };
 

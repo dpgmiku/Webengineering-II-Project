@@ -66,6 +66,21 @@ img {
     position: relative;
 }
 
+.img-large {
+    width: 40%;
+    height: 80%;
+    position: absolute;
+    margin: auto auto;
+    top:0;
+    left: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10%;
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 
 .likeButton {
     width: 40px;

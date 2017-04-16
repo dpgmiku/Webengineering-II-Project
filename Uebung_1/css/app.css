@@ -1,5 +1,4 @@
 head, body {
-
     margin: 0;
     width: 100%;
     font-family: Roboto;
@@ -31,7 +30,8 @@ header {
 
 .content {
     margin: 20px 50px;
-    display: inline-block;
+    display: block;
+    overflow: hidden;
 }
 
 nav {
@@ -67,18 +67,12 @@ img {
 }
 
 .img-large {
-    width: 40%;
-    height: 80%;
-    position: absolute;
-    margin: auto auto;
-    top:0;
-    left: 0;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 10%;
-    z-index: 100;
-    background-repeat: no-repeat;
-    background-position: center center;
+    position: fixed;
+    bottom: 20px;
+    width: 25%;
+    left: 40%;
+    z-index: 10;
+    overflow: hidden;
 }
 
 
@@ -97,9 +91,6 @@ img {
 
 }
 
-.liked {
-
-}
 
 .detailsButton {
     width: 30px;

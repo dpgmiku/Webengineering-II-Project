@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f1555373-445e-447b-83c9-684f407c2166" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Uebung_1/css/app.css" afterPath="$PROJECT_DIR$/Uebung_1/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Uebung_1/js/app.js" afterPath="$PROJECT_DIR$/Uebung_1/js/app.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Uebung_1/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
-              <caret line="65" column="23" lean-forward="true" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+            <state relative-caret-position="779">
+              <caret line="128" column="5" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -82,8 +81,8 @@
         <option value="$PROJECT_DIR$/Uebung_1/app.js" />
         <option value="$PROJECT_DIR$/Uebung_1/css/css.css" />
         <option value="$PROJECT_DIR$/Uebung_1/index.html" />
-        <option value="$PROJECT_DIR$/Uebung_1/css/app.css" />
         <option value="$PROJECT_DIR$/Uebung_1/js/app.js" />
+        <option value="$PROJECT_DIR$/Uebung_1/css/app.css" />
       </list>
     </option>
   </component>
@@ -677,12 +676,12 @@
       <workItem from="1492076090096" duration="1082000" />
       <workItem from="1492093229229" duration="30000" />
       <workItem from="1492187803344" duration="6585000" />
-      <workItem from="1492358414130" duration="8388000" />
+      <workItem from="1492358414130" duration="9564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28269000" />
+    <option name="totallyTimeSpent" value="29445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
@@ -894,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Uebung_1/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="65" column="23" lean-forward="true" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+        <state relative-caret-position="779">
+          <caret line="128" column="5" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
           <folding />
         </state>
       </provider>

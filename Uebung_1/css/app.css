@@ -5,9 +5,7 @@ head, body {
 }
 
 .container {
-    display: block;
-    width: auto;
-    margin: auto;
+
 }
 
 header {
@@ -29,9 +27,12 @@ header {
 }
 
 .content {
-    margin: 20px 50px;
+
     display: block;
     overflow: hidden;
+    display: block;
+    width: auto;
+    margin: auto;
 }
 
 nav {

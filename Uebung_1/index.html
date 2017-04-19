@@ -6,7 +6,6 @@
     <title>Übung_1</title>
     <script src="js/app.js"></script>
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
@@ -14,118 +13,89 @@
 <body>
 <header>
     <i class="fa fa-pinterest " aria-hidden="true"></i> Pinterest
+    <a id="oben"></a>
 </header>
 
-<nav>
-    <button class="addImageButton"><i class="fa fa-plus" aria-hidden="true"></i> Bild hinzufügen</button>
-</nav>
 
 <section>
-    <div class="content">
-        <div class="img">
-            <img src="http://lorempixel.com/236/100">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
+    <div class="grid">
+        <div class="col">
+            <aside>
+                <button class="addImageButton">+ Bild hinzufügen</button>
+
+            </aside>
         </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/350">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
+        <div class="col">
+            <figure class="imgControl">
+                <img src="http://lorempixel.com/236/350">
+                <input type="image" class="detailsButton">
+                <input type="image" class="likeButton">
+            </figure>
+            <figure class="imgControl">
+                <img src="http://lorempixel.com/236/550">
+                <input type="image" class="detailsButton">
+                <input type="image" class="likeButton">
+            </figure>
         </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/200">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
+        <div class="col">
+            <figure class="imgControl">
+                <img src="http://lorempixel.com/236/200">
+                <input type="image" class="detailsButton">
+                <input type="image" class="likeButton">
+            </figure>
+            <figure class="imgControl">
+                <img src="http://lorempixel.com/236/450">
+                <input type="image" class="detailsButton">
+                <input type="image" class="likeButton">
+            </figure>
         </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/150">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
+        <div class="col">
+            <figure class="imgControl">
+                <img src="http://lorempixel.com/236/150">
+                <input type="image" class="detailsButton">
+                <input type="image" class="likeButton">
+            </figure>
+            <figure class="imgControl">
+                <img src="http://lorempixel.com/236/350">
+                <input type="image" class="detailsButton">
+                <input type="image" class="likeButton">
+            </figure>
+            <figure class="imgControl">
+                <img src="http://lorempixel.com/236/600">
+                <input type="image" class="detailsButton">
+                <input type="image" class="likeButton">
+            </figure>
         </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/400">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
+        <div class="col">
+            <figure class="imgControl">
+                <img src="http://lorempixel.com/236/500">
+                <input type="image" class="detailsButton">
+                <input type="image" class="likeButton">
+            </figure>
+            <figure class="imgControl">
+                <img src="http://lorempixel.com/236/200">
+                <input type="image" class="detailsButton">
+                <input type="image" class="likeButton">
+            </figure>
         </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/250">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
-        </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/500">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
-        </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/450">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
-        </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/300">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
-        </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/250">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
-        </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/500">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
-        </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/450">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
-        </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/250">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
-        </div>
-        <div class="img">
-            <img src="http://lorempixel.com/236/100">
-            <div class="overlayButtons">
-                <input type="image" class="detailsButton" src="icons/details_icon.png">
-                <input type="image" class="likeButton" src="icons/thumbs_up_icon.png">
-            </div>
+        <div class="col">
+            <figure class="imgControl">
+                <img src="http://lorempixel.com/236/400">
+                <input type="image" class="detailsButton">
+                <input type="image" class="likeButton">
+            </figure>
+            <figure class="imgControl">
+                <img src="http://lorempixel.com/236/200">
+                <input type="image" class="detailsButton">
+                <input type="image" class="likeButton">
+            </figure>
         </div>
     </div>
 </section>
 
 
 <footer>
-    <a href="#">Back to the Top</a>
+    <a href="#oben">Back to the Top</a>
 </footer>
 
 </body>

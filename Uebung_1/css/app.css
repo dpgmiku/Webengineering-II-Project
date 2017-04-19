@@ -20,7 +20,6 @@ header {
 aside {
     margin: auto;
 
-
 }
 
 .col .addImageButton {
@@ -40,20 +39,14 @@ aside {
     min-width: 236px;
 }
 
-section {
-
-width: 100%;
-
-}
 
 nav {
-    margin-left: 50px;<
+    margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid;
 }
-
 
 footer {
     width: 100%;
@@ -87,8 +80,8 @@ img {
     width: 236px;
     height: auto;
     margin: 0px;
+    position: relative;
 }
-
 
 img {
     border-radius: 25px;
@@ -105,7 +98,6 @@ img {
 
 }
 
-
 .grid .col {
     width: 20%;
     min-width: 236px;
@@ -113,13 +105,9 @@ img {
     padding: 0;
     max-width: 20%;
     flex: 1;
-
 }
 
-
-
-
-.likeButton {
+.imgControl .likeButton {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -129,12 +117,16 @@ img {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
-    transform: rotate(90deg);
-    background-image: url("../icons/thumbs_up_icon.png");
+    transform: rotate(-90deg);
+    background-image: url("icons/thumbs_up_icon.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-
-.detailsButton {
+.imgControl .detailsButton {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -144,7 +136,12 @@ img {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
-    background-image: url("../icons/details_icon.png");
+    background-image: url("icons/details_icon.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 

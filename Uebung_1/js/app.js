@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     for (var i = 0; i < imgClassList.length; i++) {
         imgClassList[i].addEventListener('mouseenter', function (event) {
             var target = event.target;
-            var btn1 = target.firstElementChild.nextElementSibling.firstElementChild;
+            var btn1 = target.firstElementChild.nextElementSibling;
             var btn2 = btn1.nextElementSibling;
             btn1.style.visibility = "visible";
             btn1.style.opacity = 1;
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
         imgClassList[i].addEventListener('mouseleave', function (event) {
             var target = event.target;
-            var btn1 = target.firstElementChild.nextElementSibling.firstElementChild;
+            var btn1 = target.firstElementChild.nextElementSibling;
             var btn2 = btn1.nextElementSibling;
             btn1.style.visibility = "hidden";
             btn1.style.opacity = 0;
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
         imgClassList[i].addEventListener('touchstart', function (event) {
             var target = event.target;
-            var btn1 = target.firstElementChild.nextElementSibling.firstElementChild;
+            var btn1 = target.firstElementChild.nextElementSibling;
             var btn2 = btn1.nextElementSibling;
             btn1.style.visibility = "visible";
             btn1.style.opacity = 1;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
         imgClassList[i].addEventListener('touchend', function (event) {
             var target = event.target;
-            var btn1 = target.firstElementChild.nextElementSibling.firstElementChild;
+            var btn1 = target.firstElementChild.nextElementSibling;
             var btn2 = btn1.nextElementSibling;
             btn1.style.visibility = "hidden";
             btn1.style.opacity = 0;

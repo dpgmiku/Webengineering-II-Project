@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     for (var i = 0; i < detailsButtonList.length; i++) {
         detailsButtonList[i].addEventListener('click', function (event) {
             var btn = event.target;
-            var img = btn.parentNode.parentNode;
+            var img = btn.previousElementSibling;
             var imgList = document.getElementsByClassName('img-large');
             for (var i = 0; i < imgList.length; i++) {
                 imgList[i].classList.remove("img-large");
@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             img.classList.toggle("img-large");
         });
     }
-
 
     document.body.addEventListener('click', function (event) {
         if (event.target.classList[0] != 'detailsButton') {

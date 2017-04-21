@@ -1,43 +1,18 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
 
 
     var imgClassList = document.getElementsByClassName("imgControl");
     for (var i = 0; i < imgClassList.length; i++) {
         imgClassList[i].addEventListener('mouseenter', function (event) {
-            var target = event.target;
-            var btn1 = target.firstElementChild.nextElementSibling;
-            var btn2 = btn1.nextElementSibling;
-            btn1.style.visibility = "visible";
-            btn1.style.opacity = 1;
-            btn2.style.visibility = "visible";
-            btn2.style.opacity = 1;
+            showButtons(event.target.firstElementChild.nextElementSibling);
         });
         imgClassList[i].addEventListener('mouseleave', function (event) {
-            var target = event.target;
-            var btn1 = target.firstElementChild.nextElementSibling;
-            var btn2 = btn1.nextElementSibling;
-            btn1.style.visibility = "hidden";
-            btn1.style.opacity = 0;
-            btn2.style.visibility = "hidden";
-            btn2.style.opacity = 0;
+            hideButtons(event.target.firstElementChild.nextElementSibling);
         });
         imgClassList[i].addEventListener('touchstart', function (event) {
-            var target = event.target;
-            var btn1 = target.firstElementChild.nextElementSibling;
-            var btn2 = btn1.nextElementSibling;
-            btn1.style.visibility = "visible";
-            btn1.style.opacity = 1;
-            btn2.style.visibility = "visible";
-            btn2.style.opacity = 1;
-        });
-        imgClassList[i].addEventListener('touchend', function (event) {
-            var target = event.target;
-            var btn1 = target.firstElementChild.nextElementSibling;
-            var btn2 = btn1.nextElementSibling;
-            btn1.style.visibility = "hidden";
-            btn1.style.opacity = 0;
-            btn2.style.visibility = "hidden";
-            btn2.style.opacity = 0;
+            event.stopPropagation();
+            touchShow(event.target);
+
         });
     }
 
@@ -79,6 +54,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     });
 
+    function hideButtons(firstButtonNode) {
+        var secondButtonNode = firstButtonNode.nextElementSibling;
+        firstButtonNode.style.visibility = "hidden";
+        firstButtonNode.style.opacity = 0;
+        secondButtonNode.style.visibility = "hidden";
+        secondButtonNode.style.opacity = 0;
+    }
+
+    function showButtons(firstButtonNode) {
+        var secondButtonNode = firstButtonNode.nextElementSibling;
+        firstButtonNode.style.visibility = "visible";
+        firstButtonNode.style.opacity = 1;
+        secondButtonNode.style.visibility = "visible";
+        secondButtonNode.style.opacity = 1;
+    }
+
+    function touchShow(imgNode) {
+        var btn1 = imgNode.nextElementSibling;
+        if (btn1.style.visibility == "") {
+            showButtons(btn1);
+        }
+        else if (btn1.style.visibility == "visible") {
+            hideButtons(btn1);
+        }
+        else {
+            showButtons(btn1);
+        }
+
+
+    }
 
 
 });

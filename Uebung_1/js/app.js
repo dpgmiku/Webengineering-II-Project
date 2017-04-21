@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-
-
     var imgClassList = document.getElementsByClassName("imgControl");
+    /**
+     * Adds eventlisteners to every image-control in the dom
+     */
     for (var i = 0; i < imgClassList.length; i++) {
         imgClassList[i].addEventListener('mouseenter', function (event) {
             showButtons(event.target.firstElementChild.nextElementSibling);
@@ -12,11 +13,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         imgClassList[i].addEventListener('touchstart', function (event) {
             event.stopPropagation();
             touchShow(event.target);
-
         });
     }
-
     var likeButtonClassList = document.getElementsByClassName("likeButton");
+    /**
+     * Adds eventlisteners to every likeButton in the dom
+     */
     for (var i = 0; i < likeButtonClassList.length; i++) {
         likeButtonClassList[i].addEventListener('click', function (event) {
             var btn = event.target;
@@ -26,11 +28,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
             else {
                 btn.style.transform = "rotate(-180deg)";
             }
-
         });
     }
 
     var detailsButtonList = document.getElementsByClassName("detailsButton");
+    /**
+     * adds eventlisteners to every detailsButton in the dom
+     */
     for (var i = 0; i < detailsButtonList.length; i++) {
         detailsButtonList[i].addEventListener('click', function (event) {
             var btn = event.target;
@@ -44,16 +48,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
-    document.body.addEventListener('click', function (event) {
-        if (event.target.classList[0] != 'detailsButton') {
-            var imgList = document.getElementsByClassName('img-large');
-            for (var i = 0; i < imgList.length; i++) {
-                imgList[i].classList.remove("img-large");
-                imgList[i].classList.toggle("img");
-            }
-        }
-    });
 
+    // Forces an overlay image, if opened, to be closed if a click happens somewhere else on the screen
+    document.body.addEventListener('click',
+        function (event) {
+            if (event.target.classList[0] != 'detailsButton') {
+                var imgList = document.getElementsByClassName('img-large');
+                for (var i = 0; i < imgList.length; i++) {
+                    imgList[i].classList.remove("img-large");
+                    imgList[i].classList.toggle("img");
+                }
+            }
+        });
+
+    /**
+     *  Hides the buttons on the imageControl
+     * @param firstButtonNode   expects the first button-node of an image-container
+     */
     function hideButtons(firstButtonNode) {
         var secondButtonNode = firstButtonNode.nextElementSibling;
         firstButtonNode.style.visibility = "hidden";
@@ -62,6 +73,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         secondButtonNode.style.opacity = 0;
     }
 
+    /**
+     *  shows the buttons on the imageControl
+     * @param firstButtonNode   expects the first button-node of an image-container
+     */
     function showButtons(firstButtonNode) {
         var secondButtonNode = firstButtonNode.nextElementSibling;
         firstButtonNode.style.visibility = "visible";
@@ -70,6 +85,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         secondButtonNode.style.opacity = 1;
     }
 
+    /**
+     *
+     * @param imgNode   expects the image Node of the image-container
+     */
     function touchShow(imgNode) {
         var btn1 = imgNode.nextElementSibling;
         if (btn1.style.visibility == "") {

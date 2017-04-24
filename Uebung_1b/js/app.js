@@ -45,8 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
     /**
      * switches the likeButton states
      */
-    function likeToggle() {
+    function likeToggle(event) {
         if (event.type == "touchstart") {
+
             event.preventDefault();
         }
         if (this.style.transform == "-90" || this.style.transform == "rotate(0deg)") {

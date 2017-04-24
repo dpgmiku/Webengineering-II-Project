@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
-
     // Forces an overlay image, if opened, to be closed if a click happens somewhere else on the screen
     document.body.addEventListener('click',
         function (event) {

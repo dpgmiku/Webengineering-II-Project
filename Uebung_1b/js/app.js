@@ -1,7 +1,6 @@
 'use:strict';
 document.addEventListener("DOMContentLoaded", function () {
-
-    // initializes EventListeners for the pictures containers
+    // initializes EventListeners for the picture-containers
     var picsList = document.getElementsByClassName("picsContainer");
     for (var i = 0; i < picsList.length; i++) {
         picsList[i].addEventListener('mouseenter', onEnter, false);
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /**
-     * makes the pictures buttons visible
+     * makes the picture-buttons visible
      */
     function onEnter() {
         var btn1 = this.firstElementChild.nextElementSibling.firstElementChild;
@@ -34,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /**
-     * makes the pictures buttons invisible
+     * makes the picture-buttons invisible
      */
     function onLeave() {
         var btn1 = this.firstElementChild.nextElementSibling.firstElementChild;
@@ -60,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /**
-     * displays the picture clicked in an full-screen overlay
+     * displays the triggered picture in a full-screen overlay
      */
     function picDetails() {
         // the clicked picture's being copied and initialized to be viewed full-screen

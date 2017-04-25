@@ -62,8 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
     /**
      * displays the triggered picture in a full-screen overlay
      */
-    function picDetails() {
+    function picDetails(event) {
         // the clicked picture's being copied and initialized to be viewed full-screen
+        if (event.type == "touchstart") {
+
+           event.preventDefault();
+        }
         var img = this.parentNode.parentNode.firstElementChild;
         var copyImg = img.cloneNode(true);
         copyImg.style.maxHeight = "100%";

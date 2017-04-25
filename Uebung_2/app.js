@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var fs = require('fs');
 var app = express();
 
 
@@ -23,13 +24,31 @@ app.use('/staticfiles', express.static(path.join(__dirname, '/public')));
 /**
  * Aufgabe 4
  */
-app.get('/time', function(req, res) {
+app.get('/time', function (req, res) {
     res.set('content-type', 'text/plain');
     var date = new Date();
     var dateString = date.toString();
     res.send(dateString);
-})
+});
 
+
+app.get('/text.txt', function (req, res) {
+    var startTimestamp = process.hrtime();
+
+    fs.readFile(path.join(__dirname, '/textfile.txt'), 'utf8', function (err, data) {
+        if (err) {
+            return console.log(err);
+        }
+        var endtime = process.hrtime();
+        var total = [endtime[0] - startTimestamp[0],endtime[1] - startTimestamp[1]];
+
+        var time = total[0] + 's : ' + total[1] + 'ns';
+        console.log(data);
+        res.set('content-type', 'text/plain');
+        res.send(data + time);
+
+    });
+})
 
 
 app.listen(3000, function () {

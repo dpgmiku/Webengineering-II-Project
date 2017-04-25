@@ -31,7 +31,9 @@ app.get('/time', function (req, res) {
     res.send(dateString);
 });
 
-
+/**
+ * Aufgabe 5a
+ */
 app.get('/text.txt', function (req, res) {
     var startTimestamp = process.hrtime();
 
@@ -40,7 +42,7 @@ app.get('/text.txt', function (req, res) {
             return console.log(err);
         }
         var endtime = process.hrtime();
-        var total = [endtime[0] - startTimestamp[0],endtime[1] - startTimestamp[1]];
+        var total = [endtime[0] - startTimestamp[0], endtime[1] - startTimestamp[1]];
 
         var time = total[0] + 's : ' + total[1] + 'ns';
         console.log(data);

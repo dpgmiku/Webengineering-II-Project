@@ -36,22 +36,17 @@ app.get('/time', function (req, res) {
  */
 app.get('/text.txt', function (req, res) {
     var startTimestamp = process.hrtime();
-
     fs.readFile(path.join(__dirname, '/textfile.txt'), 'utf8', function (err, data) {
         if (err) {
             return console.log(err);
         }
         var endtime = process.hrtime();
         var total = [endtime[0] - startTimestamp[0], endtime[1] - startTimestamp[1]];
-
         var time = total[0] + 's : ' + total[1] + 'ns';
-        console.log(data);
         res.set('content-type', 'text/plain');
         res.send(data + time);
-
     });
-})
-
+});
 
 app.listen(3000, function () {
 

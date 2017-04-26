@@ -1,3 +1,7 @@
+// Aussehen, wie gedrehte Bilder/Buttons, nicht per JS umsetzen:  
+// sondern: JS aendert Klasse des Objekts, CSS definiert dann Aussehen der dieser Klassen (rotiert, ...) 
+// gleiches fuer neu erstellte Elemente: Klasse o.ae. geben, Styles dann per CSS
+
 'use:strict';
 document.addEventListener("DOMContentLoaded", function () {
     // initializes EventListeners for the picture-containers

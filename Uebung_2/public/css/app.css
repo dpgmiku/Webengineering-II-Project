@@ -1,0 +1,148 @@
+*, * ::before, * ::after{
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+html {
+	background-color: blue;
+	font-size: 16px;
+}
+
+body {
+	background-color: red;
+	min-height: 99.8vh;
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2, h3 {
+	display: none;
+}
+
+header {
+	display: flex;
+	height: 50px;
+	justify-content: space-between;
+}
+
+body > main {
+	background-color: white;
+	display: flex;
+	flex-grow: 1;
+}
+
+main > section {
+	background-color: green;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	flex-grow: 1;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+	width: 280px;
+	flex-wrap: wrap;
+
+}
+
+aside {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-width: 70px;
+	justify-content: flex-end;
+	align-content: flex-start;
+	background-color: orange;
+}
+
+.picsContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 1px;
+}
+
+.picsContainer img {
+	width: 100%;	
+}
+
+figure > div {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+input {
+	width: 70px;
+	height: 30px;
+	margin: 0;
+	text-align: center;
+}
+
+.likeButton, .detailsButton {
+	-webkit-filter: invert(100%);
+	background-size: 100%;
+	text-indent: 100%;
+	overflow: hidden;
+	margin: 4px;
+	opacity: 0;
+}
+
+.likeButton {
+	background-image: url("icons/thumbs_up_icon.png");
+	width: 40px;
+    height: 40px;
+}
+
+.detailsButton {
+	width: 30px;
+    height: 30px;
+	background-image: url("icons/details_icon.png");
+}
+	
+
+footer {
+	background-color: yellow;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+@media screen and (max-width:380px){
+	h1 {
+		font-size: 2rem;
+	}
+	
+	body > main {
+		flex-direction: column;
+	}
+	
+	a[href="#unten"]{
+		display: none;
+	}
+	
+	aside {
+		min-width: 100%;
+		justify-content: space-between;
+	}
+}
+
+
+@media screen and (max-device-width: 1024px){
+	.likeButton, .detailsButton {
+		opacity: 1;
+	}
+}
+	

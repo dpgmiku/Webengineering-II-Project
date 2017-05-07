@@ -4,15 +4,16 @@ var fs = require('fs');
 var app = express();
 
 
-
-
 /**
- * Aufgabe 3
+ * Task 3
+ *delivers static files from ./public folder by calling URLS with path with prefix /staticfiles/
+ *
  */
 app.use('/staticfiles', express.static(path.join(__dirname, '/public')));
 
 /**
- * Aufgabe 4
+ * Task 4
+ * reads server time by calling a new path /time and returns it to client as text/plain
  */
 app.get('/time', function (req, res) {
     res.setHeader('content-type', 'text/plain');
@@ -23,7 +24,9 @@ app.get('/time', function (req, res) {
 
 
 /**
- * Aufgabe 5a
+ * Task 5a
+ *reads asynchron from textfile.txt and returns it as text/plain by adding duration of this process in nanoseconds 
+ *@returns error, if such occurs, as log in the console.
  */
 app.get('/text.txt', function (req, res) {
 	res.setHeader('content-type', 'text/plain');
@@ -44,9 +47,20 @@ app.get('/text.txt', function (req, res) {
     });
 })
 
+/**
+ * Task 5b
+ *
+ * Limitations: consuming additional memory and output must depending only on their inputs. 
+ */
+
+
+
+
+
 
 /**
- * Aufgabe 1
+ * Task 1
+ * returns "Hello World!" as html by requesting all paths on the server excluding previously stated. It has to be written on the end of the file, so it would not overwrite previously methods
  */
 app.use('/', function (req, res) {
     res.send('<!DOCTYPE html>' +
@@ -56,6 +70,7 @@ app.use('/', function (req, res) {
         '</html>'
     );
 });
+
 
 
 app.listen(3000, function () {

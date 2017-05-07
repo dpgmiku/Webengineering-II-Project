@@ -31,7 +31,7 @@ header {
 }
 
 body > main {
-	background-color: white;
+        background-color: white;
 	display: flex;
 	flex-grow: 1;
 }
@@ -59,7 +59,7 @@ aside {
 	flex-direction: row;
 	flex-wrap: wrap;
 	max-width: 70px;
-	justify-content: flex-end;
+
 	align-content: flex-start;
 	background-color: orange;
 }

@@ -1,13 +1,16 @@
 {
   "name": "uebung_2",
   "version": "1.0.0",
+  "author":{
+	"name": "Masteruser",
+	"email": "master@us.er"
+	},
+  "description": "a students WebEngineering 2 project",
   "email": "s67350@beuth-hochschule.de",
   "main": "app.js",
   "license": "MIT",
-  "keywords": [],
-  "author": "Masteruser",
+  "keywords": ["webengineering", "students project"],
   "dependencies": {
     "express": "^4.15.2"
-
   }
 }

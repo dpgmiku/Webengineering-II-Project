@@ -4,7 +4,10 @@
   "email": "s67350@beuth-hochschule.de",
   "main": "app.js",
   "license": "MIT",
+  "keywords": [],
+  "author": "Masteruser",
   "dependencies": {
     "express": "^4.15.2"
+
   }
 }

@@ -25,7 +25,7 @@ app.get('/time', function (req, res) {
 
 /**
  * Task 5a
- *reads asynchron from textfile.txt and returns it as text/plain by adding duration of this process in nanoseconds 
+ *reads asynchronous from textfile.txt and returns it as text/plain by adding duration of this process in nanoseconds
  *@returns error, if such occurs, as log in the console.
  */
 app.get('/text.txt', function (req, res) {

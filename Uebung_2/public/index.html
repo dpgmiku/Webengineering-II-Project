@@ -1,10 +1,154 @@
+﻿<!-- IDs, ALTs usw auch immer auf Englisch 
+	fuer Sprungmarken kein extra Element nutzen sondern bestehende 	
+	fuer Buttons außerhalb von Forms immer <Button> benutzen --> 
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
+	<meta name="author" content="René, Paul, Michal" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übung_1 - Startseite</title>
+    <script type="text/javascript" src="js/app.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
-<h1>Hello World</h1>
 
+<body>
+	<header>
+		<a href="indexNeu.html"><h1>TheCakeIsALie</h1> </a>  
+		<a id="oben"></a>
+		<a href="#unten">To the Bottom</a>
+	</header>
+
+	<main>
+		<h2>Hauptbereich</h2>
+		<section>
+		<h3>Bildbereich</h3>
+	
+		<div class="col">
+			<figure class="picsContainer">
+				<img src="200.png" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>    
+			<figure class="picsContainer">
+				<img src="800.gif" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>    
+		</div>	
+	
+		<div class="col">
+			<figure class="picsContainer">
+				<img src="800.jpg" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   
+			<figure class="picsContainer">
+				<img src="200.png" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   
+			<figure class="picsContainer">
+				<img src="800.jpg" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   	
+		</div>	
+	
+		<div class="col">
+			<figure class="picsContainer">
+				<img src="200.png" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   
+			<figure class="picsContainer">
+				<img src="800.jpg" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   
+			<figure class="picsContainer">
+				<img src="200.png" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   
+			<figure class="picsContainer">
+				<img src="200.png" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   	
+		</div>	
+	
+		<div class="col">
+			<figure class="picsContainer">
+				<img src="800.gif" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   
+			<figure class="picsContainer">
+				<img src="200.png" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   	
+		</div>	
+	
+		<div class="col">
+			<figure class="picsContainer">
+				<img src="200.png" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   
+			<figure class="picsContainer">
+				<img src="800.jpg" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   
+			<figure class="picsContainer">
+				<img src="800.jpg" alt="Bild">
+				<div>
+					<input type="image" alt="bild"  class="detailsButton">
+					<input type="image" alt="bild"  class="likeButton">
+				</div>
+			</figure>   
+		</div>	
+		</section>
+
+		<aside>
+			<input type="button" value="+ Bild">
+			<input type="button" value="- Bild">
+		</aside>
+	</main>
+
+	<footer>
+		<a href="#oben">Back to the Top</a>
+		<a id="unten"></a>
+	</footer>
 </body>
 </html>

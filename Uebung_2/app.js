@@ -1,3 +1,10 @@
+/** Main app for the server
+*
+* @author The Cake Is a Lie
+* @license MIT
+*/
+
+
 "use strict";
 var express = require('express');
 var path = require('path');

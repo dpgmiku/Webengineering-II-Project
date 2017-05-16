@@ -98,7 +98,8 @@ app.get('/users?', function (req, res, next) {
     var data = store.select('users');
     for (var i = 0; i < data.length; i++) {
         var el = data[i];
-        el.href = req.protocol + "://" + req.get('Host') + '/users/' + req.params.id;
+        el.href = req.protocol + "://" + req.get('Host') + '/users/' + el.id;
+        el.tweets = req.protocol + "://" + req.get('Host') + '/users?expand=tweets';
         if (req.query.expand === "tweets") {
             var tweets = store.select("tweets");
             tweets = tweets.filter(function (element) {
@@ -109,7 +110,7 @@ app.get('/users?', function (req, res, next) {
 
 
             el.href = req.get('Host') + req.originalUrl + "/" + el.id;
-            el.tweets.href = req.get('Host') + req.originalUrl + "/" + el.id + "/" + "tweets";
+            el.tweets.href = req.protocol + "://" + req.get('Host') + '/users/' + el.id + "?expand=tweets";
         }
     }
 
@@ -120,16 +121,15 @@ app.get('/users?', function (req, res, next) {
 app.get('/users/:id?', function (req, res, next) {
     var element = store.select('users', req.params.id);
     element.href = req.protocol + "://" + req.get('Host') + '/users/' + req.params.id;
+    element.tweets = req.protocol + "://" + req.get('Host') + '/users/' + req.params.id + "?expand=tweets"
     if (req.query.expand === "tweets") {
         var tweets = store.select("tweets");
         tweets = tweets.filter(function (el) {
-
             return el.creator.href === element.href;
         });
         element.tweets = {};
-        element.tweets.href = req.get('Host') + req.originalUrl + "/" + element.id + "/" + "tweets";
+        element.tweets.href =req.protocol + "://" + req.get('Host') + req.originalUrl;
         element.tweets.items = tweets;
-
     }
     res.json(element);
 });
@@ -150,19 +150,19 @@ app.put('/users/:id', function (req, res, next) {
 });
 
 app.patch('/users/:id', function (req, res, next) {
-   var data = req.body;
-   var status = 400;
-   var user = store.select('users', req.params.id);
-   if(data.firstname !== undefined){
-       user.firstname = data.firstname;
-       status = 200;
-   }
-   if(data.lastname !== undefined) {
-       user.lastname = data.lastname;
-       status = 200;
-   }
-   store.replace('users', req.params.id, user);
-   res.status(status).end();
+    var data = req.body;
+    var status = 400;
+    var user = store.select('users', req.params.id);
+    if (data.firstname !== undefined) {
+        user.firstname = data.firstname;
+        status = 200;
+    }
+    if (data.lastname !== undefined) {
+        user.lastname = data.lastname;
+        status = 200;
+    }
+    store.replace('users', req.params.id, user);
+    res.status(status).end();
 });
 
 

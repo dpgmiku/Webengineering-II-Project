@@ -42,6 +42,7 @@ app.get('/text.txt', function (req, res) {
 
     fs.readFile(path.join(__dirname, '/textfile.txt'), 'utf8', function (err, data) {
         if (err) {
+            // Fehlercode zurückgeben
             return console.log(err);
         }
         var endtime = process.hrtime();
@@ -69,7 +70,6 @@ app.get('/text2.txt', function (req, res) {
 
         var time = total[0] + 's : ' + total[1] + 'ns';
         console.log(data);
-
         res.send(data + time);
 
     });
@@ -90,7 +90,6 @@ function memoize(func) {
         if (cache[path] === undefined) {
             func(path, function (data) {
                 if (data) {
-
                     cache[path] = data;
                 }
                 callback(cache[path]);

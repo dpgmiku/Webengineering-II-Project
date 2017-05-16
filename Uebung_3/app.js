@@ -149,6 +149,22 @@ app.put('/users/:id', function (req, res, next) {
     res.status(200).end();
 });
 
+app.patch('/users/:id', function (req, res, next) {
+   var data = req.body;
+   var status = 400;
+   var user = store.select('users', req.params.id);
+   if(data.firstname !== undefined){
+       user.firstname = data.firstname;
+       status = 200;
+   }
+   if(data.lastname !== undefined) {
+       user.lastname = data.lastname;
+       status = 200;
+   }
+   store.replace('users', req.params.id, user);
+   res.status(status).end();
+});
+
 
 // CatchAll for the other requests (unfound routes/resources) ********
 

@@ -108,15 +108,15 @@ function processUser(el, req) {
         el.tweets.items = tweets;
         el.tweets.href = req.protocol + "://" + req.get('Host') + '/users/' + el.id + "/tweets";
     } else {
-        el.tweets = req.protocol + "://" + req.get('Host') + '/users?expand=tweets';
+        el.tweets = req.protocol + "://" + req.get('Host') + '/users/' + el.id + "/tweets";
     }
-    return element;
+    return el;
 }
 app.get('/users?', function (req, res, next) {
     var data = store.select('users');
 
     // Process every user
-    var users = {}
+    var users = {};
     for (var i = 0; i < data.length; i++) {
         // add reference to user himself and to his tweets
         users[i] = processUser(data[i], req);
@@ -127,7 +127,6 @@ app.get('/users?', function (req, res, next) {
 app.get('/users/:id?', function (req, res, next) {
     // Set
     var element = store.select('users', req.params.id);
-
     var user = processUser(element, req);
     res.json(user);
 });

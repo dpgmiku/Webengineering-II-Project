@@ -94,44 +94,42 @@ app.put('/tweets/:id', function (req, res, next) {
 
 
 // TODO: add your routes, error handling etc.
+function processUser(el, req) {
+    el.href = req.protocol + "://" + req.get('Host') + '/users/' + el.id;
+
+    // If query contains expand=tweets then put the tweets into tweets attr of user
+    if (req.query.expand === "tweets") {
+        var tweets = store.select("tweets");
+        // Filter tweets by userID / user-refernce
+        tweets = tweets.filter(function (element) {
+            return element.creator.href === el.href;
+        });
+        el.tweets = {};
+        el.tweets.items = tweets;
+        el.tweets.href = req.protocol + "://" + req.get('Host') + '/users/' + el.id + "/tweets";
+    } else {
+        el.tweets = req.protocol + "://" + req.get('Host') + '/users?expand=tweets';
+    }
+    return element;
+}
 app.get('/users?', function (req, res, next) {
     var data = store.select('users');
+
+    // Process every user
+    var users = {}
     for (var i = 0; i < data.length; i++) {
-        var el = data[i];
-        el.href = req.protocol + "://" + req.get('Host') + '/users/' + el.id;
-        el.tweets = req.protocol + "://" + req.get('Host') + '/users?expand=tweets';
-        if (req.query.expand === "tweets") {
-            var tweets = store.select("tweets");
-            tweets = tweets.filter(function (element) {
-                return element.creator.href === el.href;
-            });
-            el.tweets = {};
-            el.tweets.items = tweets;
-
-
-            el.href = req.get('Host') + req.originalUrl + "/" + el.id;
-            el.tweets.href = req.protocol + "://" + req.get('Host') + '/users/' + el.id + "?expand=tweets";
-        }
+        // add reference to user himself and to his tweets
+        users[i] = processUser(data[i], req);
     }
-
     res.json(data);
-
 });
 
 app.get('/users/:id?', function (req, res, next) {
+    // Set
     var element = store.select('users', req.params.id);
-    element.href = req.protocol + "://" + req.get('Host') + '/users/' + req.params.id;
-    element.tweets = req.protocol + "://" + req.get('Host') + '/users/' + req.params.id + "?expand=tweets"
-    if (req.query.expand === "tweets") {
-        var tweets = store.select("tweets");
-        tweets = tweets.filter(function (el) {
-            return el.creator.href === element.href;
-        });
-        element.tweets = {};
-        element.tweets.href =req.protocol + "://" + req.get('Host') + req.originalUrl;
-        element.tweets.items = tweets;
-    }
-    res.json(element);
+
+    var user = processUser(element, req);
+    res.json(user);
 });
 
 app.post('/users', function (req, res, next) {
@@ -149,6 +147,9 @@ app.put('/users/:id', function (req, res, next) {
     res.status(200).end();
 });
 
+/**
+ *  patch user if req.body does not contain any attr of user then set status code to 400
+ */
 app.patch('/users/:id', function (req, res, next) {
     var data = req.body;
     var status = 400;

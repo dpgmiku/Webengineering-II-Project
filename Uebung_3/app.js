@@ -94,6 +94,14 @@ app.put('/tweets/:id', function (req, res, next) {
 
 
 // TODO: add your routes, error handling etc.
+
+/**
+ *
+ * @param el one specified user from the user-collection in the store
+ * @param req client-request
+ * @returns {*} returns user extended with href to his tweets. If query is set to expand=tweets then also include his
+ * tweets in the user->tweets attributes
+ */
 function processUser(el, req) {
     el.href = req.protocol + "://" + req.get('Host') + '/users/' + el.id;
 
@@ -112,6 +120,10 @@ function processUser(el, req) {
     }
     return el;
 }
+
+/**
+ * Get all users incl. href to tweets-collection. If query set to expand then user element also contains tweets
+ */
 app.get('/users?', function (req, res, next) {
     var data = store.select('users');
 
@@ -124,6 +136,9 @@ app.get('/users?', function (req, res, next) {
     res.json(data);
 });
 
+/**
+ * Gets specified user with id. If query set, then response also contains his tweets
+ */
 app.get('/users/:id?', function (req, res, next) {
     // Set
     var element = store.select('users', req.params.id);
@@ -131,16 +146,25 @@ app.get('/users/:id?', function (req, res, next) {
     res.json(user);
 });
 
+/**
+ * Post new user to store. User has to contain firstname and lastname attributes in the request-body
+ */
 app.post('/users', function (req, res, next) {
     var id = store.insert('users', req.body);
     res.status(201).json(store.select('users', id));
 });
 
+/**
+ * Delete user with specified id
+ */
 app.delete('/users/:id', function (req, res, next) {
     store.remove('users', req.params.id);
     res.status(200).end();
 });
 
+/**
+ * Update user-information under specified id
+ */
 app.put('/users/:id', function (req, res, next) {
     store.replace('users', req.params.id, req.body);
     res.status(200).end();

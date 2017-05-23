@@ -150,8 +150,19 @@ app.get('/users/:id?', function (req, res, next) {
  * Post new user to store. User has to contain firstname and lastname attributes in the request-body
  */
 app.post('/users', function (req, res, next) {
-    var id = store.insert('users', req.body);
-    res.status(201).json(store.select('users', id));
+    var user = {};
+    if (req.body.lastname !== undefined && req.body.firstname !== undefined) {
+        user.firstname = req.body.firstname;
+        user.lastname = req.body.lastname;
+        var id = store.insert('users', req.body);
+        res.status(201).json(store.select('users', id));
+    }
+    else {
+        res.status(400).end();
+    }
+
+
+
 });
 
 /**

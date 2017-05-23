@@ -124,7 +124,7 @@ function processUser(el, req) {
 /**
  * Get all users incl. href to tweets-collection. If query set to expand then user element also contains tweets
  */
-app.get('/users?', function (req, res, next) {
+app.get('/users', function (req, res, next) {
     var data = store.select('users');
     if(data !== undefined) {
         // Process every user
@@ -143,7 +143,7 @@ app.get('/users?', function (req, res, next) {
 /**
  * Gets specified user with id. If query set, then response also contains his tweets
  */
-app.get('/users/:id?', function (req, res, next) {
+app.get('/users/:id', function (req, res, next) {
     // Set
     var element = store.select('users', req.params.id);
     if(element !== undefined) {

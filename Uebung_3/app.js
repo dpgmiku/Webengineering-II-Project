@@ -126,14 +126,18 @@ function processUser(el, req) {
  */
 app.get('/users?', function (req, res, next) {
     var data = store.select('users');
-
-    // Process every user
-    var users = {};
-    for (var i = 0; i < data.length; i++) {
-        // add reference to user himself and to his tweets
-        users[i] = processUser(data[i], req);
+    if(data !== undefined) {
+        // Process every user
+        var users = {};
+        for (var i = 0; i < data.length; i++) {
+            // add reference to user himself and to his tweets
+            users[i] = processUser(data[i], req);
+        }
+        res.json(data);
+    } else {
+        res.send("ERROR!: No Users in store");
+        res.status(400).end();
     }
-    res.json(data);
 });
 
 /**
@@ -142,8 +146,14 @@ app.get('/users?', function (req, res, next) {
 app.get('/users/:id?', function (req, res, next) {
     // Set
     var element = store.select('users', req.params.id);
-    var user = processUser(element, req);
-    res.json(user);
+    if(element !== undefined) {
+        var user = processUser(element, req);
+        res.json(user);
+    }
+    else {
+        res.send("ERROR!: User not found");
+        res.status(400).end();
+    }
 });
 
 /**
@@ -158,11 +168,9 @@ app.post('/users', function (req, res, next) {
         res.status(201).json(store.select('users', id));
     }
     else {
+        res.send("ERROR: Missing parameters!");
         res.status(400).end();
     }
-
-
-
 });
 
 /**
@@ -183,6 +191,7 @@ app.put('/users/:id', function (req, res, next) {
 
 /**
  *  patch user if req.body does not contain any attr of user then set status code to 400
+ *  is idempotent
  */
 app.patch('/users/:id', function (req, res, next) {
     var data = req.body;

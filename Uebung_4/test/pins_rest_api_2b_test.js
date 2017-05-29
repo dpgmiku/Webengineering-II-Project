@@ -24,7 +24,7 @@ var pinCorrect3 = cfg.pinCorrect3;
 var pinCorrect4 = cfg.pinCorrect4;
 
 // start of tests ********************************************************************************
-describe.skip('Task 2.b Limits and Offset', function() {
+describe('Task 2.b Limits and Offset', function() {
     var pinResults = [];
     var totalResults = [];
     var total = 0;

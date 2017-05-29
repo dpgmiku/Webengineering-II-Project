@@ -33,7 +33,31 @@ var internalKeys = {id: 'number', timestamp: 'number'};
 /* GET all pins */
 pins.route('/')
     .get(function (req, res, next) {
-        res.locals.items = store.select('pins');
+        var items = store.select('pins');
+        if(items === undefined) {
+            var err = new HttpError('Not elements in store', 204);
+            next(err);
+            return;
+        }
+
+
+        if(req.query.filter !== undefined) {
+            var filters = req.query.filter.split(",");
+            var resultItems = {};
+            try {
+                items.forEach(function(e) {
+                    resultItems.push(filterPin(filters, e));
+                });
+                res.locals.items = resultItems;
+            } catch(error) {
+                var err = new HttpError('No Element found', 400);
+                next(err);
+                return
+            }
+        }
+        else {
+            res.locals.items = items;
+        }
         res.locals.processed = true;
         logger("GET fetched store items");
         next();
@@ -48,11 +72,11 @@ pins.route('/')
             next(err);
         }
         else {
-            if(!checkTypeParam(pin)) {
-            var err = new HttpError('Missing required parameters', 400);
-            next(err);
-            return;
-        }
+            if (!checkTypeParam(pin)) {
+                var err = new HttpError('Missing required parameters', 400);
+                next(err);
+                return;
+            }
 
 
             checkDescription(pin);
@@ -88,19 +112,51 @@ pins.route('/')
         }
     });
 
+
+function filterPin(filterArray, pin) {
+    var newPin = {};
+    filterArray.forEach(function(e) {
+        var contains = false;
+        for(var prop in pin) {
+            if (prop === e)
+            {
+                contains = true;
+                newPin[e] = pin[e];
+                break;
+            }
+        }
+        if(contains === false) {
+            throw new Error('Pins has no such property: ' + e);
+        }
+    });
+
+    return newPin;
+
+}
+
 // TODO implement
 pins.route('/:id')
     .get(function (req, res, next) {
         var items = store.select('pins', req.params.id);
-        if(items === undefined) {
-            var err = new HttpError('No Elements found', 404);
+        if (items === undefined) {
+            var err = new HttpError('No Element found', 404);
             next(err);
             return
         }
-        else {
-
+        if(req.query.filter !== undefined) {
+            var filters = req.query.filter.split(",");
+            try {
+                var resultPin = filterPin(filters, items);
+                res.locals.items = resultPin;
+            } catch(error) {
+                var err = new HttpError('No Element found', 400);
+                next(err);
+                return
+            }
         }
-        res.locals.items = items;
+        else {
+            res.locals.items = items;
+        }
         res.locals.processed = true;
         next();
     })
@@ -126,7 +182,7 @@ pins.route('/:id')
             return;
         }
         else {
-            if(!checkTypeParam(pin)) {
+            if (!checkTypeParam(pin)) {
                 var err = new HttpError('Missing required parameters', 400);
                 next(err);
                 return;

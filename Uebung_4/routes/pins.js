@@ -40,7 +40,6 @@ pins.route('/')
             return;
         }
 
-
         if(req.query.filter !== undefined) {
             var filters = req.query.filter.split(",");
             var resultItems = {};
@@ -58,6 +57,30 @@ pins.route('/')
         else {
             res.locals.items = items;
         }
+
+        if(req.query.offset !== undefined) {
+            var offset = parseInt(req.query.offset);
+            if(offset >= 0 && offset < res.locals.items.length) {
+                res.locals.items = res.locals.items.slice(offset, items.length);
+            } else {
+                var err = new HttpError('Offset < 0', 400);
+                next(err);
+                return
+            }
+        }
+
+        if(req.query.limit !== undefined) {
+            var limit = parseInt(req.query.limit);
+            if(limit > 0) {
+                res.locals.items = res.locals.items.slice(0, limit);
+            } else {
+                var err = new HttpError('Offset < 0', 400);
+                next(err);
+                return
+            }
+        }
+
+
         res.locals.processed = true;
         logger("GET fetched store items");
         next();

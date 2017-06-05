@@ -3,7 +3,7 @@
  * @author Johannes Konert
  * @licence CC BY-SA 4.0
  *
- * @module routes/pins
+ * @module routes/comments
  * @type {Router}
  */
 
@@ -46,7 +46,6 @@ comments.route('/')
         next();
     })
 
-
     .post(function (req, res, next) {
         var comment = req.body;
         if (!checkRequiredAttributes(comment)) {
@@ -74,6 +73,11 @@ comments.route('/')
     });
 
 
+/**
+ * Checks the required attributes of a comment, adds id + timestamp and sets the likes and dislikes to 0 if not existing
+ * @param comment Comment the params should be checked
+ * @returns {boolean} returns true if everything is ok and false if not
+ */
 function checkRequiredAttributes(comment) {
     var valid = true;
     valid = checkPinID(comment);
@@ -87,9 +91,13 @@ function checkRequiredAttributes(comment) {
 
 }
 
+
+/**
+ * Checks if Pin-ID is existing and if the pinid is an integer
+ * @param comment comment to be checked
+ * @returns {boolean} returns true if everything is correct and the pinid could be found
+ */
 function checkPinID(comment) {
-
-
     if ((Number.isInteger(comment.pinid))) {
         var item = store.select('pins', comment.pinid);
         if (item === undefined) {
@@ -101,10 +109,21 @@ function checkPinID(comment) {
 
 }
 
+/**
+ * Checks if the text is a string
+ * @param comment
+ * @returns {boolean} returns true if text is a string
+ */
 function checkText(comment) {
     return (typeof comment.text === 'string' || comment.text instanceof String)
 }
 
+
+/**
+ * Checks if likes are not negative and a number
+ * @param comment
+ * @returns {boolean} true if everything is ok
+ */
 function checkLikes(comment) {
     if (comment.likes !== undefined) {
         if (Number.isInteger(comment.likes)) {
@@ -116,6 +135,11 @@ function checkLikes(comment) {
     }
 }
 
+/**
+ * Checks if dislikes are existing and an integer
+ * @param comment
+ * @returns {boolean} true if everything is ok
+ */
 function checkDislikes(comment) {
     if (comment.dislikes !== undefined) {
         if (Number.isInteger(comment.dislikes)) {
@@ -128,7 +152,7 @@ function checkDislikes(comment) {
 }
 
 
-// TODO implement
+
 comments.route('/:id')
     .get(function (req, res, next) {
         var items = store.select('comments', req.params.id);

@@ -40,6 +40,7 @@ pins.route('/')
             return;
         }
 
+        // Checks for filter
         if (req.query.filter !== undefined) {
             var filters = req.query.filter.split(",");
             var resultItems = {};
@@ -58,6 +59,7 @@ pins.route('/')
             res.locals.items = items;
         }
 
+        // Checks for offset
         if (req.query.offset !== undefined) {
             var offset = parseInt(req.query.offset);
             if (offset >= 0 && offset < res.locals.items.length) {
@@ -69,6 +71,7 @@ pins.route('/')
             }
         }
 
+        // Checks for limit
         if (req.query.limit !== undefined) {
             var limit = parseInt(req.query.limit);
             if (limit > 0) {
@@ -88,14 +91,13 @@ pins.route('/')
 
 
     .post(function (req, res, next) {
-        // TODO implement
         var pin = req.body;
-        if (!checkRequiredParams(pin)) {
+        if (!checkRequiredAttributes(pin)) {
             var err = new HttpError('Missing required parameters', 400);
             next(err);
         }
         else {
-            if (!checkTypeParam(pin)) {
+            if (!checkType(pin)) {
                 var err = new HttpError('Missing required parameters', 400);
                 next(err);
                 return;
@@ -136,6 +138,12 @@ pins.route('/')
     });
 
 
+/**
+ * Filters attributes of a pin
+ * @param filterArray The attributes to be part of the pin object
+ * @param pin the pin to be processed
+ * @returns {{}} returns the pin with the desired attributes
+ */
 function filterPin(filterArray, pin) {
     var newPin = {};
     filterArray.forEach(function (e) {
@@ -156,7 +164,6 @@ function filterPin(filterArray, pin) {
 
 }
 
-// TODO implement
 pins.route('/:id')
     .get(function (req, res, next) {
         var items = store.select('pins', req.params.id);
@@ -216,13 +223,13 @@ pins.route('/:id')
 
     .put(function (req, res, next) {
         var pin = req.body;
-        if (!checkRequiredParams(pin)) {
+        if (!checkRequiredAttributes(pin)) {
             var err = new HttpError('Missing required parameters', 400);
             next(err);
             return;
         }
         else {
-            if (!checkTypeParam(pin)) {
+            if (!checkType(pin)) {
                 var err = new HttpError('Missing required parameters', 400);
                 next(err);
                 return;
@@ -267,7 +274,12 @@ pins.route('/:id')
     });
 
 
-function checkRequiredParams(pin) {
+/**
+ * Checks the required attributes of the pin
+ * @param pin pin to be checked
+ * @returns {boolean} true if everything is ok
+ */
+function checkRequiredAttributes(pin) {
     var complete = true;
     var contains = false;
     for (var property in pin) {
@@ -287,10 +299,19 @@ function checkRequiredParams(pin) {
     return complete;
 }
 
+/**
+ * Inserts the current system-time into the pin-object
+ * @param pin
+ */
 function insertTimeStamp(pin) {
     pin.timestamp = Date.now();
 }
 
+/**
+ * Checks if the description is undefined if yes the sets it to empty string
+ * @param pin
+ * @returns {boolean} true if everything is ok
+ */
 function checkDescription(pin) {
     if (pin.description === undefined) {
         pin.description = '';
@@ -298,7 +319,12 @@ function checkDescription(pin) {
     return true;
 }
 
-function checkTypeParam(pin) {
+/**
+ * Checks the type attribute of the pin
+ * @param pin
+ * @returns {boolean} true if everything is ok
+ */
+function checkType(pin) {
     var type = pin.type;
     var result = false;
     switch (type) {
@@ -316,6 +342,11 @@ function checkTypeParam(pin) {
     return result;
 }
 
+/**
+ * Checks the views of the pin
+ * @param pin
+ * @returns {boolean} true if everything is ok
+ */
 function checkViews(pin) {
     if (pin.views === undefined) {
         pin.views = 0;
@@ -329,6 +360,11 @@ function checkViews(pin) {
     return true;
 }
 
+/**
+ * Checks the ranking of a pin
+ * @param pin
+ * @returns {boolean} true if everything is ok
+ */
 function checkRanking(pin) {
     if (pin.ranking === undefined) {
         pin.ranking = 0;

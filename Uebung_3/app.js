@@ -50,7 +50,7 @@ app.use(function (req, res, next) {
 
 // request type application/json check
 app.use(function (req, res, next) {
-    if (['POST', 'PUT'].indexOf(req.method) > -1 &&
+    if (['POST', 'PUT', 'PATCH'].indexOf(req.method) > -1 &&
         !( /application\/json/.test(req.get('Content-Type')) )) {
         // send error code 415: unsupported media type
         res.status(415).send('wrong Content-Type');  // user has SEND the wrong type

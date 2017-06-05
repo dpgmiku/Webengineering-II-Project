@@ -34,21 +34,21 @@ var internalKeys = {id: 'number', timestamp: 'number'};
 pins.route('/')
     .get(function (req, res, next) {
         var items = store.select('pins');
-        if(items === undefined) {
+        if (items === undefined) {
             var err = new HttpError('Not elements in store', 204);
             next(err);
             return;
         }
 
-        if(req.query.filter !== undefined) {
+        if (req.query.filter !== undefined) {
             var filters = req.query.filter.split(",");
             var resultItems = {};
             try {
-                items.forEach(function(e) {
+                items.forEach(function (e) {
                     resultItems.push(filterPin(filters, e));
                 });
                 res.locals.items = resultItems;
-            } catch(error) {
+            } catch (error) {
                 var err = new HttpError('No Element found', 400);
                 next(err);
                 return
@@ -58,9 +58,9 @@ pins.route('/')
             res.locals.items = items;
         }
 
-        if(req.query.offset !== undefined) {
+        if (req.query.offset !== undefined) {
             var offset = parseInt(req.query.offset);
-            if(offset >= 0 && offset < res.locals.items.length) {
+            if (offset >= 0 && offset < res.locals.items.length) {
                 res.locals.items = res.locals.items.slice(offset, items.length);
             } else {
                 var err = new HttpError('Offset < 0', 400);
@@ -69,9 +69,9 @@ pins.route('/')
             }
         }
 
-        if(req.query.limit !== undefined) {
+        if (req.query.limit !== undefined) {
             var limit = parseInt(req.query.limit);
-            if(limit > 0) {
+            if (limit > 0) {
                 res.locals.items = res.locals.items.slice(0, limit);
             } else {
                 var err = new HttpError('Offset < 0', 400);
@@ -138,17 +138,16 @@ pins.route('/')
 
 function filterPin(filterArray, pin) {
     var newPin = {};
-    filterArray.forEach(function(e) {
+    filterArray.forEach(function (e) {
         var contains = false;
-        for(var prop in pin) {
-            if (prop === e)
-            {
+        for (var prop in pin) {
+            if (prop === e) {
                 contains = true;
                 newPin[e] = pin[e];
                 break;
             }
         }
-        if(contains === false) {
+        if (contains === false) {
             throw new Error('Pins has no such property: ' + e);
         }
     });
@@ -166,12 +165,12 @@ pins.route('/:id')
             next(err);
             return
         }
-        if(req.query.filter !== undefined) {
+        if (req.query.filter !== undefined) {
             var filters = req.query.filter.split(",");
             try {
                 var resultPin = filterPin(filters, items);
                 res.locals.items = resultPin;
-            } catch(error) {
+            } catch (error) {
                 var err = new HttpError('No Element found', 400);
                 next(err);
                 return
@@ -186,7 +185,25 @@ pins.route('/:id')
 
     .delete(function (req, res, next) {
         try {
+
+            function removePinComments(pinID) {
+                var comments = store.select('comments');
+
+                function filterByPinID(object) {
+                    if (object.pinid === pin.id) {
+                        return true;
+                    }
+                    return false;
+                }
+
+                var pinComments = comments.filter(filterByPinID);
+                pinComments.forEach(function (e) {
+                    store.remove('comments', e.id);
+                });
+            }
+
             var pin = store.remove('pins', req.params.id);
+            removePinComments(pin.id);
             res.locals.processed = true;
             res.status(204);
             next();

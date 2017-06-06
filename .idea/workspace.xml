@@ -2,132 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1555373-445e-447b-83c9-684f407c2166" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/array-flatten/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/array-flatten/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/array-flatten/array-flatten.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/array-flatten/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/.coveralls.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/.eslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/src/browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/src/debug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/src/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/body-parser/node_modules/debug/src/node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/content-disposition/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/content-disposition/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/content-disposition/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/content-disposition/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/content-disposition/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/content-type/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/content-type/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/content-type/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/content-type/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/content-type/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/cookie-signature/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/cookie-signature/History.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/cookie-signature/Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/cookie-signature/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/cookie-signature/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/escape-html/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/escape-html/Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/escape-html/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/escape-html/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/.coveralls.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/.eslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/src/browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/src/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/debug/src/node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/ms/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/ms/license.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/ms/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/node_modules/ms/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/finalhandler/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/http-errors/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/http-errors/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/http-errors/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/http-errors/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/http-errors/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/media-typer/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/media-typer/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/media-typer/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/media-typer/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/media-typer/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/merge-descriptors/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/merge-descriptors/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/merge-descriptors/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/merge-descriptors/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/merge-descriptors/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/mime-types/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/negotiator/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/negotiator/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/negotiator/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/negotiator/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/negotiator/lib/charset.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/negotiator/lib/encoding.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/negotiator/lib/language.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/negotiator/lib/mediaType.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/negotiator/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/on-finished/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/on-finished/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/on-finished/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/on-finished/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/on-finished/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/path-to-regexp/History.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/path-to-regexp/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/path-to-regexp/Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/path-to-regexp/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/path-to-regexp/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/proxy-addr/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/proxy-addr/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/proxy-addr/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/proxy-addr/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/proxy-addr/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/range-parser/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/range-parser/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/range-parser/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/range-parser/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/range-parser/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/serve-static/HISTORY.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/serve-static/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/serve-static/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/serve-static/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/serve-static/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/setprototypeof/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/setprototypeof/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/setprototypeof/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/setprototypeof/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/utils-merge/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/utils-merge/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/utils-merge/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/utils-merge/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_3/node_modules/utils-merge/package.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Uebung_4/routes/comments.js" afterPath="$PROJECT_DIR$/Uebung_4/routes/comments.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Uebung_4/routes/pins.js" afterPath="$PROJECT_DIR$/Uebung_4/routes/pins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Uebung_4/app.js" afterPath="$PROJECT_DIR$/Uebung_4/app.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -151,7 +27,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Uebung_2/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2376">
+            <state relative-caret-position="2700">
               <caret line="108" column="40" lean-forward="false" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
               <folding />
             </state>
@@ -161,7 +37,7 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Uebung_2/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
+            <state relative-caret-position="25">
               <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
               <folding />
             </state>
@@ -171,8 +47,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="75">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -181,18 +57,18 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Uebung_3/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="50">
               <caret line="2" column="76" lean-forward="false" selection-start-line="2" selection-start-column="76" selection-end-line="2" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Uebung_4/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-388">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="-283">
+              <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -201,17 +77,17 @@
       <file leaf-file-name="comments.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Uebung_4/routes/comments.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
+            <state relative-caret-position="825">
               <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pins.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pins.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Uebung_4/routes/pins.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1301">
+            <state relative-caret-position="1169">
               <caret line="365" column="46" lean-forward="false" selection-start-line="365" selection-start-column="46" selection-end-line="365" selection-end-column="46" />
               <folding />
             </state>
@@ -221,7 +97,7 @@
       <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Uebung_4/blackbox/store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-344">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -231,7 +107,7 @@
       <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Uebung_3/blackbox/store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
+            <state relative-caret-position="525">
               <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="7" />
               <folding />
             </state>
@@ -251,7 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addimage</find>
       <find>flex</find>
       <find>detail</find>
       <find>hidden</find>
@@ -281,6 +156,7 @@
       <find>get</find>
       <find>delete</find>
       <find>pin</find>
+      <find>pins</find>
     </findStrings>
     <replaceStrings>
       <replace>figure class=&quot;over</replace>
@@ -317,6 +193,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Uebung_4/routes/comments.js" />
         <option value="$PROJECT_DIR$/Uebung_4/routes/pins.js" />
+        <option value="$PROJECT_DIR$/Uebung_4/app.js" />
       </list>
     </option>
   </component>
@@ -338,7 +215,7 @@
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="2582" />
-    <option name="height" value="1462" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -355,6 +232,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -433,9 +313,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,7 +321,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="7.8.0" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Bitnami/wampstack-7.1.2-1/apache2/htdocs/RZB" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
@@ -807,13 +684,6 @@
       <setting name="jsFile" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -956,7 +826,8 @@
       <workItem from="1495540285898" duration="4796000" />
       <workItem from="1495623575429" duration="47000" />
       <workItem from="1495658809939" duration="8000" />
-      <workItem from="1496689170533" duration="3220000" />
+      <workItem from="1496689170533" duration="3248000" />
+      <workItem from="1496737483916" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="gitignored node modules again">
       <created>1494237332570</created>
@@ -1025,10 +896,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88301000" />
+    <option name="totallyTimeSpent" value="88383000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2582" height="1462" extended-state="6" />
+    <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1390,7 +1261,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Uebung_2/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
+        <state relative-caret-position="25">
           <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
           <folding />
         </state>
@@ -1398,7 +1269,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Uebung_2/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
+        <state relative-caret-position="2700">
           <caret line="108" column="40" lean-forward="false" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
           <folding />
         </state>
@@ -1406,7 +1277,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Uebung_3/blackbox/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="525">
           <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="7" />
           <folding />
         </state>
@@ -1414,7 +1285,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Uebung_3/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="50">
           <caret line="2" column="76" lean-forward="false" selection-start-line="2" selection-start-column="76" selection-end-line="2" selection-end-column="76" />
           <folding />
         </state>
@@ -1422,31 +1293,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Uebung_4/blackbox/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-344">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Uebung_4/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-388">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Uebung_4/routes/comments.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
+        <state relative-caret-position="825">
           <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="14" />
           <folding />
         </state>
@@ -1454,8 +1317,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Uebung_4/routes/pins.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1301">
+        <state relative-caret-position="1169">
           <caret line="365" column="46" lean-forward="false" selection-start-line="365" selection-start-column="46" selection-end-line="365" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Uebung_4/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-283">
+          <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="21" />
           <folding />
         </state>
       </provider>

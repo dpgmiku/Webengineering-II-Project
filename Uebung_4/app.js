@@ -24,6 +24,7 @@ var debug = require('debug')('we2:server');
 var HttpError = require('./restapi/http-error.js');
 var restAPIchecks = require('./restapi/request-checks.js');
 var pins = require('./routes/pins');
+var comments = require('./routes/comments');
 
 
 
@@ -44,6 +45,7 @@ app.use(restAPIchecks);
 
 // Routes ******************************************************
 app.use('/pins', pins);
+app.use('/comments', comments);
 
 
 // (from express-generator boilerplate)

@@ -194,8 +194,6 @@ pins.route('/:id')
         try {
 
             function removePinComments(pinID) {
-                var comments = store.select('comments');
-
                 function filterByPinID(object) {
                     if (object.pinid === pin.id) {
                         return true;
@@ -203,10 +201,15 @@ pins.route('/:id')
                     return false;
                 }
 
-                var pinComments = comments.filter(filterByPinID);
-                pinComments.forEach(function (e) {
-                    store.remove('comments', e.id);
-                });
+                var comments = store.select('comments');
+                if(comments !== undefined) {
+                    var pinComments = comments.filter(filterByPinID);
+                    pinComments.forEach(function (e) {
+                        store.remove('comments', e.id);
+                    });
+                }
+
+
             }
 
             var pin = store.remove('pins', req.params.id);

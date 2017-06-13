@@ -1,6 +1,7 @@
 /** This module defines the routes for pins using the store.js as db memory
  *
- * @author Johannes Konert
+ * @author Johannes Konert, Réné, Michael, Paul
+ *
  * @licence CC BY-SA 4.0
  *
  * @module routes/pins
@@ -276,6 +277,7 @@ pins.route('/:id')
     });
 
 
+
 /**
  * Checks the required attributes of the pin
  * @param pin pin to be checked
@@ -299,7 +301,6 @@ function checkRequiredAttributes(pin) {
             break;
         }
     }
-
     return complete;
 }
 

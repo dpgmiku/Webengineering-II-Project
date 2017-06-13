@@ -1,6 +1,6 @@
 /** This module defines the routes for comments using the store.js as db memory
  *
- * @author Johannes Konert
+ * @author Johannes Konert, Réné, Michael, Paul
  * @licence CC BY-SA 4.0
  *
  * @module routes/comments

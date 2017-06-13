@@ -1,6 +1,6 @@
 {
-  "name": "u4-codepack",
-  "version": "0.0.1",
+  "name": "u4-complete",
+  "version": "0.0.2",
   "description": "Code skeleton for exercise 4 (implementing an REST API after designed mocha tests)",
   "private": true,
   "scripts": {

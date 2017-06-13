@@ -284,8 +284,10 @@ pins.route('/:id')
 function checkRequiredAttributes(pin) {
     var complete = true;
     var contains = false;
-    for (var property in pin) {
-        for (var requi in requiredKeys) {
+
+    for(var requi in requiredKeys) {
+        contains = false;
+        for(var property in pin) {
             if (requi === property) {
                 if (typeof pin[property] === 'string') {
                     contains = true;
@@ -297,6 +299,7 @@ function checkRequiredAttributes(pin) {
             break;
         }
     }
+
     return complete;
 }
 

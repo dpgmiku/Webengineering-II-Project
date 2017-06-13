@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1555373-445e-447b-83c9-684f407c2166" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_2/node_modules/mime/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Uebung_2/node_modules/utils-merge/index.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Uebung_4/routes/pins.js" afterPath="$PROJECT_DIR$/Uebung_4/routes/pins.js" />
     </list>
@@ -27,8 +29,8 @@
       <file leaf-file-name="pins.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Uebung_4/routes/pins.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="297" column="9" lean-forward="false" selection-start-line="297" selection-start-column="9" selection-end-line="297" selection-end-column="9" />
+            <state relative-caret-position="402">
+              <caret line="288" column="8" lean-forward="false" selection-start-line="288" selection-start-column="8" selection-end-line="288" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -834,7 +836,7 @@
       <workItem from="1497270042432" duration="1092000" />
       <workItem from="1497288144373" duration="1166000" />
       <workItem from="1497330510940" duration="852000" />
-      <workItem from="1497331771705" duration="308000" />
+      <workItem from="1497331771705" duration="688000" />
     </task>
     <task id="LOCAL-00001" summary="gitignored node modules again">
       <created>1494237332570</created>
@@ -906,19 +908,17 @@
       <option name="project" value="LOCAL" />
       <updated>1497289308162</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="removed node_modules from ue2">
+      <created>1497333533115</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1497333533115</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UE4_Tests - 2017.06.13 at 07h 13m 43s.xml">
-      <configuration name="UE4_Tests" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="UE4_Tests - 2017.06.13 at 07h 14m 08s.xml">
-      <configuration name="UE4_Tests" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="UE4_Tests - 2017.06.13 at 07h 18m 02s.xml">
-      <configuration name="UE4_Tests" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="UE4_Tests - 2017.06.13 at 07h 18m 09s.xml">
       <configuration name="UE4_Tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
@@ -940,9 +940,18 @@
     <history-entry file="UE4_Tests - 2017.06.13 at 07h 22m 32s.xml">
       <configuration name="UE4_Tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
+    <history-entry file="UE4_Tests - 2017.06.13 at 08h 03m 26s.xml">
+      <configuration name="UE4_Tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="UE4_Tests - 2017.06.13 at 08h 04m 29s.xml">
+      <configuration name="UE4_Tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="UE4_Tests - 2017.06.13 at 08h 04m 34s.xml">
+      <configuration name="UE4_Tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92601000" />
+    <option name="totallyTimeSpent" value="92981000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="0" width="2574" height="1454" extended-state="0" />
@@ -957,7 +966,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33074534" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32841614" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32841614" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1007,7 +1016,8 @@
     <MESSAGE value="Check for params and if users already exists" />
     <MESSAGE value="Deleted ?" />
     <MESSAGE value="Fixed Bug with comment delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Bug with comment delete" />
+    <MESSAGE value="removed node_modules from ue2" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed node_modules from ue2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1101,8 +1111,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Uebung_4/routes/pins.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="297" column="9" lean-forward="false" selection-start-line="297" selection-start-column="9" selection-end-line="297" selection-end-column="9" />
+        <state relative-caret-position="402">
+          <caret line="288" column="8" lean-forward="false" selection-start-line="288" selection-start-column="8" selection-end-line="288" selection-end-column="8" />
           <folding />
         </state>
       </provider>

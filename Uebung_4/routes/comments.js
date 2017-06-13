@@ -23,8 +23,6 @@ var pins = require('../routes/pins');
 var comments = express.Router();
 
 const storeKey = 'comments';
-
-
 // TODO if you like, you can use these objects for easy checking of required/optional and internalKeys....or remove it.
 var requiredKeys = {title: 'string', type: ['image', 'video', 'website'], src: 'string'};
 var optionalKeys = {description: 'string', views: 'number', ranking: 'number'};
@@ -100,7 +98,7 @@ function checkRequiredAttributes(comment) {
 function checkPinID(comment) {
     if ((Number.isInteger(comment.pinid))) {
         var item = store.select('pins', comment.pinid);
-        if (item === undefined) {
+        if (item !== undefined) {
             return true;
         }
     }

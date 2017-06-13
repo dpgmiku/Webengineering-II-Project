@@ -83,7 +83,6 @@ pins.route('/')
             }
         }
 
-
         res.locals.processed = true;
         logger("GET fetched store items");
         next();

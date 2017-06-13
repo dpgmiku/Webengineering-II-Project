@@ -296,7 +296,6 @@ function checkRequiredAttributes(pin) {
             complete = false;
             break;
         }
-
     }
     return complete;
 }

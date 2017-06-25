@@ -84,13 +84,37 @@ pins.route('/:id')
         });
     })
     .put(function (req, res, next) {
-
-        // TODO replace store and use mongoose/MongoDB
-        // store.replace(storeKey, req.body.id, req.body);
-        res.status(codes.success);
-        // res.locals.items = store.select(storeKey, id);
-        res.locals.processed = true;
-        next();
+        pinModel.find({_id: req.params.id}, function (err, items) {
+            if (err) {
+                next(err);
+            } else {
+                if (items.length === 1) {
+                    if (!(items[0].updatedAt === req.body.updatedAt && !items[0].__V == req.body.__v )) {
+                        var err = new HttpError('Conflict' + req.originalUrl, codes.conflict);
+                        next(err);
+                    }
+                    pinModel.findByIdAndRemove(req.params.id, function (err, item) {
+                        if (err || !item) {
+                            err = err || new Error("item not found");
+                            res.set('Status-Code', 404);
+                            next(err);
+                        } else {
+                            delete(req.body.updatedAt);
+                            delete(req.body.timestamp);
+                            var pin = new pinModel(req.body);
+                            pin.save(function (err) {
+                                if (err) {
+                                    return next(err);
+                                }
+                                res.locals.processed = true;
+                                res.set('Status-Code', codes.created);
+                                next();
+                            });
+                        }
+                    });
+                }
+            }
+        });
     })
     .delete(function (req, res, next) {
         pinModel.findByIdAndRemove(req.params.id, function (err, item) {
@@ -107,10 +131,35 @@ pins.route('/:id')
 
     })
     .patch(function (req, res, next) {
+        var update = {
+            title: req.body.title,
+            type: req.body.type,
+            src: req.body.src,
+            description: req.body.description,
+            views: req.body.views,
+            ranking: req.body.ranking
+        };
+        // delete undefined values from update array
+        function removeUndefined(obj) {
+            for (var prop in obj) {
+                if (obj[prop] === undefined) {
+                    delete obj[prop];
+                }
+            }
+        }
 
-        // TODO replace these lines by correct code with mongoose/mongoDB
-        var err = new HttpError('Unimplemented method!', codes.servererror);
-        next(err);
+        var opts = {runValidators: true};
+        removeUndefined(update);
+
+        pinModel.findByIdAndUpdate(req.params.id, {$set: update}, opts, function (error) {
+            if (error) {
+                next(error);
+            } else {
+                res.locals.processed = true;
+                res.set('Status-Code', codes.success);
+                next();
+            }
+        })
     })
 
     .all(function (req, res, next) {

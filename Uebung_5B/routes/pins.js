@@ -69,7 +69,6 @@ pins.route('/')
         }
         query.exec(function (err, items) {
             if (err) {
-
                 var error = new HttpError(err + req.originalUrl, codes.wrongrequest);
                 next(error);
             } else {

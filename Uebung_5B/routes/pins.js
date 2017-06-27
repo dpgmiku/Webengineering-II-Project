@@ -57,7 +57,18 @@ pins.route('/')
         else {
             filterobject = {};
         }
-        pinModel.find({},filterobject, function (err, items) {
+
+        var query = pinModel.find({},filterobject);
+
+        if(req.query.limit !== undefined) {
+            var limit = parseInt(req.query.limit);
+            query.limit(limit);
+        }
+        if(req.query.offset !== undefined) {
+            var off = parseInt(req.query.offset);
+            query.skip(off);
+        }
+        query.exec(function (err, items) {
             res.locals.items = items;
             res.locals.processed = true;
             next();

@@ -42,8 +42,7 @@ db.once('openUri', function () {
  */
 function createFilterObject(filterArray) {
     var filterobject = {};
-    for(var i = 0; i < filterArray.length; i++)
-    {
+    for (var i = 0; i < filterArray.length; i++) {
         filterobject[filterArray[i]] = 1;
     }
     return filterobject;
@@ -58,20 +57,26 @@ pins.route('/')
             filterobject = {};
         }
 
-        var query = pinModel.find({},filterobject);
+        var query = pinModel.find({}, filterobject);
 
-        if(req.query.limit !== undefined) {
+        if (req.query.limit !== undefined) {
             var limit = parseInt(req.query.limit);
             query.limit(limit);
         }
-        if(req.query.offset !== undefined) {
+        if (req.query.offset !== undefined) {
             var off = parseInt(req.query.offset);
             query.skip(off);
         }
         query.exec(function (err, items) {
-            res.locals.items = items;
-            res.locals.processed = true;
-            next();
+            if (err) {
+
+                var error = new HttpError(err + req.originalUrl, codes.wrongrequest);
+                next(error);
+            } else {
+                res.locals.items = items;
+                res.locals.processed = true;
+                next();
+            }
         });
 
     })
@@ -109,7 +114,7 @@ pins.route('/:id')
         else {
             filterobject = {};
         }
-        pinModel.find({_id: req.params.id},filterobject, function (err, items) {
+        pinModel.find({_id: req.params.id}, filterobject, function (err, items) {
             if (err) {
                 next(err);
             } else {

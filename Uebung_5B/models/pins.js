@@ -49,7 +49,10 @@ var pin = new Schema({
         min: 0,
         default: 0
     }},  {
-    timestamps: {createdAt: 'timestamp'}
+    timestamps: {type: Date,
+        required: true,
+        default: Date.now,
+        createdAt: 'timestamp'}
 });
 
 module.exports = mongoose.model('Pin', pin);

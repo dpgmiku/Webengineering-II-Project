@@ -69,11 +69,16 @@ pins.route('/')
         }
         query.exec(function (err, items) {
             if (err) {
+                if (err.code === 2) {
+                    var error = new HttpError(err + req.originalUrl, codes.wrongrequest);
+                } else {
+                    var error = new HttpError('Internal Server Error', 500);
+                }
 
-                var error = new HttpError(err + req.originalUrl, codes.wrongrequest);
                 next(error);
             } else {
                 res.locals.items = items;
+                res.status(200);
                 res.locals.processed = true;
                 next();
             }
@@ -86,10 +91,11 @@ pins.route('/')
 
         pin.save(function (err) {
             if (err) {
-                return next(err);
+                var error = new HttpError('Missing or invalid parameters', 400);
+                next(error);
             }
             res.locals.processed = true;
-            res.set('Status-Code', codes.created);
+            res.status(codes.created);
             next();
         });
 
@@ -116,7 +122,8 @@ pins.route('/:id')
         }
         pinModel.find({_id: req.params.id}, filterobject, function (err, items) {
             if (err) {
-                next(err);
+                var error = new HttpError('Id ' + req.params.id + ' could not be found', 404);
+                next(error);
             } else {
                 res.locals.items = items;
                 res.locals.processed = true;
@@ -127,17 +134,18 @@ pins.route('/:id')
     .put(function (req, res, next) {
         pinModel.find({_id: req.params.id}, function (err, items) {
             if (err) {
-                next(err);
+                var error = new HttpError('Id ' + req.params.id + ' could not be found', 404);
+                next(error);
             } else {
                 if (items.length === 1) {
-                    if (!(items[0].updatedAt === req.body.updatedAt && !items[0].__V == req.body.__v )) {
+                    if (items[0].updatedAt === req.body.updatedAt && items[0].__v == req.body.__v ) {
                         var err = new HttpError('Conflict' + req.originalUrl, codes.conflict);
                         next(err);
                     }
                     pinModel.findByIdAndRemove(req.params.id, function (err, item) {
                         if (err || !item) {
                             err = err || new Error("item not found");
-                            res.set('Status-Code', 404);
+                            res.status(404);
                             next(err);
                         } else {
                             delete(req.body.updatedAt);
@@ -145,10 +153,11 @@ pins.route('/:id')
                             var pin = new pinModel(req.body);
                             pin.save(function (err) {
                                 if (err) {
-                                    return next(err);
+                                    var error = new HttpError('Missing or invalid parameters', 400);
+                                    return next(error);
                                 }
                                 res.locals.processed = true;
-                                res.set('Status-Code', codes.created);
+                                res.status(codes.success);
                                 next();
                             });
                         }
@@ -160,11 +169,10 @@ pins.route('/:id')
     .delete(function (req, res, next) {
         pinModel.findByIdAndRemove(req.params.id, function (err, item) {
             if (err || !item) {
-                err = err || new Error("item not found");
-                res.set('Status-Code', 404);
-                next(err);
+                var error = new HttpError('Id ' + req.params.id + ' could not be found', 404);
+                next(error);
             } else {
-                res.set('Status-Code', 200);
+                res.status(200);
                 res.locals.processed = true;
                 next();
             }
@@ -192,12 +200,14 @@ pins.route('/:id')
         var opts = {runValidators: true};
         removeUndefined(update);
 
-        pinModel.findByIdAndUpdate(req.params.id, {$set: update}, opts, function (error) {
-            if (error) {
+        pinModel.findByIdAndUpdate(req.params.id, {$set: update}, opts, function (err) {
+            if (err) {
+                var error = new HttpError('Id ' + req.params.id + ' could not be found', 404);
                 next(error);
             } else {
                 res.locals.processed = true;
-                res.set('Status-Code', codes.success);
+                res.status(200);
+
                 next();
             }
         })

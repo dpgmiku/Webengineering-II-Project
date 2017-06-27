@@ -35,10 +35,29 @@ db.once('openUri', function () {
     logger("DB connection established");
 });
 
+// Helper functions *************************
+/**
+ * Takes an Array of filter-strings for the db to build
+ * @param filterArray array of strings
+ */
+function createFilterObject(filterArray) {
+    var filterobject = {};
+    for(var i = 0; i < filterArray.length; i++)
+    {
+        filterobject[filterArray[i]] = 1;
+    }
+    return filterobject;
+}
 // routes **************
 pins.route('/')
     .get(function (req, res, next) {
-        pinModel.find({}, function (err, items) {
+        if (req.query.filter !== undefined) {
+            var filterobject = createFilterObject(req.query.filter.split(","));
+        }
+        else {
+            filterobject = {};
+        }
+        pinModel.find({},filterobject, function (err, items) {
             res.locals.items = items;
             res.locals.processed = true;
             next();
@@ -73,7 +92,13 @@ pins.route('/:id')
     .get(function (req, res, next) {
         // TODO replace store and use mongoose/MongoDB
         // res.locals.items = store.select(storeKey, req.params.id);
-        pinModel.find({_id: req.params.id}, function (err, items) {
+        if (req.query.filter !== undefined) {
+            var filterobject = createFilterObject(req.query.filter.split(","));
+        }
+        else {
+            filterobject = {};
+        }
+        pinModel.find({_id: req.params.id},filterobject, function (err, items) {
             if (err) {
                 next(err);
             } else {
